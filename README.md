@@ -15,11 +15,12 @@ Welcome to the trials and tribulations of Vint! For this round, we are asking yo
 * After you have completed the task, we will ask you to teardown and re-provision your infra on a demo call, where you will walk us through your code and demo your capabilities.
 
 # Steps
-1. Create an Azure function that prints 'Hello, Vint!' in your favorite programming language
-2. Create an ARM template to build and deploy the Azure Function
-3. Create a pipeline that takes in the above ARM template and builds/re-deploys the Function
-4. Have the pipeline trigger a build on commits from repo
-5. Put pipeline into an ARM template
+1. Create your own resource group to deploy your function to
+2. Create an Azure function that prints 'Hello, Vint!' in your favorite programming language
+3. Create an ARM template to build and deploy the Azure Function
+4. Create a pipeline that takes in the above ARM template and builds/re-deploys the Function
+5. Have the pipeline trigger a build on commits from repo
+6. Put pipeline into an ARM template
 
 ~You will have 2 hours from the time you start reading this to complete~
 
