@@ -22,3 +22,27 @@ Welcome to the trials and tribulations of Vint! For this round, we are asking yo
 5. Put pipeline into an ARM template
 
 ~You will have 2 hours from the time you start reading this to complete~
+
+## Things Patrick Needs to do
+- add andrew to azure account
+  - give correct permissions
+  - app admin
+  - devops admin
+- see if josh can add github repo to function app > deployment center
+
+## Steps that Patrick did to get here
+```
+    brew install azure-cli 
+    az group create --location eastus --resource-group PatricksResourceGroup ## we deploy stuff to our resource groups?
+    az deployment group create --resource-group PatricksResourceGroup --template-file ./azure-arm.json
+```
+
+### Notes
+- I created ```./azure-pipelines.yml``` according to [this doc](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/add-template-to-azure-pipelines)
+  - believe this kicks off a build on commit
+  - was also following along with [a CI/CD doc for Azure Functions](https://www.azuredevopslabs.com/labs/vstsextend/azurefunctions/)
+- Did not end up deploying a successful function, will continue to play with
+- The above ```steps that patrick did``` were needed to create base framework for infra?
+- On commit, GitHub Action kicks off
+  - ```./github/workflows/main_XXXX.yml``` was auto-generated when I linked github source for function app
+  - fine with me if this is how he does it, but would press on what it does
